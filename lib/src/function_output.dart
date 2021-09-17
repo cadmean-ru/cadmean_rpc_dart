@@ -1,3 +1,4 @@
+/// Contains the result of a cadRPC function call or an error code.
 class FunctionOutput {
   final int error;
   final dynamic result;

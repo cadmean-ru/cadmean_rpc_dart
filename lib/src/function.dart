@@ -7,12 +7,15 @@ import 'function_error.dart';
 import 'rpc_data_type.dart';
 import 'jwt_auth_ticket.dart';
 
+/// A reference to a cadRPC function.
 class RpcFunction {
   final String name;
   RpcClient _client;
 
   RpcFunction(this.name, this._client);
 
+  /// Calls this function on the server with the given arguments.
+  /// Returns [FunctionOutput] that will contain the returned value or an error.
   Future<FunctionOutput> call(List arguments) async {
     var responseData = await _makeCallAndSend(arguments);
     var outputJson = _client.configuration.codecProvider.decode(responseData);
@@ -21,6 +24,9 @@ class RpcFunction {
     return output;
   }
 
+  /// Calls this function on the server with the given arguments.
+  /// Returns the result of the function.
+  /// Throws [FunctionError] if the call failed with an error.
   Future<dynamic> callThrowing(List arguments) async {
     var output = await call(arguments);
     if (output.error != RpcErrorCode.noError) {

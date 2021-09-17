@@ -1,3 +1,4 @@
+/// Contains the predefined error codes.
 class RpcErrorCode {
   static const int noError = 0;
 
@@ -21,6 +22,12 @@ class RpcErrorCode {
   static const int niceError = -69;
 }
 
+/// Thrown if the function returned an error.
+///
+/// The code identified the cause of the error.
+/// It can be either one of the predefined errors (see [RpcErrorCode])
+/// that are negative numbers or a user-defined code that should be
+/// positive by convention. Zero indicates no error.
 class FunctionError {
   final int code;
 
