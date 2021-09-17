@@ -1,4 +1,4 @@
-# cadRPC client library for Python
+# cadRPC client library for Dart
 
 cadRPC is an easy-to-use RPC technology. It's goal is to simplify the communication with your web API, hiding all the HTTP and JSON stuff.
 
