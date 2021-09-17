@@ -8,3 +8,13 @@ Add dependency to the ```pubspec.yaml``` file.
 ```yaml
 cadmean_rpc: ^0.1.0
 ```
+## Contributing
+
+Feel free to submit issues or create pull requests following fork-and-pull git workflow.
+
+## See also
+
+* [Android client library](https://github.com/cadmean-ru/androidRPCKit)
+* [Python client library](https://github.com/cadmean-ru/pythonRPCKit)
+* [Example server](https://github.com/cadmean-ru/ExampleRpcServer)
+* [C# client and server library](https://github.com/cadmean-ru/csharpRPCKit)
