@@ -6,8 +6,9 @@ cadRPC is an easy-to-use RPC technology. It's goal is to simplify the communicat
 
 Add dependency to the ```pubspec.yaml``` file.
 ```yaml
-cadmean_rpc: ^0.1.0
+cadmean_rpc: ^0.1.2
 ```
+
 ## Contributing
 
 Feel free to submit issues or create pull requests following fork-and-pull git workflow.

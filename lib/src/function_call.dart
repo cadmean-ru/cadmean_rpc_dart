@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class FunctionCall {
   List<dynamic> arguments = List.empty();
   String authorization = '';
@@ -15,12 +13,8 @@ class FunctionCall {
         metaData = json['meta'];
 
   Map toJson() {
-    var jsonArgs = arguments.map((e) {
-      if (e is List || e is Map) return jsonEncode(e);
-      return e;
-    }).toList();
     return <String, dynamic>{
-      'args': jsonArgs,
+      'args': arguments,
       'auth': authorization,
     };
   }

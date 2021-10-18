@@ -16,7 +16,7 @@ class RpcFunction {
 
   /// Calls this function on the server with the given arguments.
   /// Returns [FunctionOutput] that will contain the returned value or an error.
-  Future<FunctionOutput> call(List arguments) async {
+  Future<FunctionOutput> call([List arguments = const []]) async {
     var responseData = await _makeCallAndSend(arguments);
     var outputJson = _client.configuration.codecProvider.decode(responseData);
     var output = FunctionOutput.fromJson(outputJson);
@@ -27,7 +27,7 @@ class RpcFunction {
   /// Calls this function on the server with the given arguments.
   /// Returns the result of the function.
   /// Throws [FunctionError] if the call failed with an error.
-  Future<dynamic> callThrowing(List arguments) async {
+  Future<dynamic> callThrowing([List arguments = const []]) async {
     var output = await call(arguments);
     if (output.error != RpcErrorCode.noError) {
       throw FunctionError(output.error);

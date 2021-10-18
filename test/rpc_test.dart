@@ -12,7 +12,7 @@ void main() {
     });
 
     test('Should make call getDate', () async {
-      var res = await rpc.function('getDate').call([]);
+      var res = await rpc.function('getDate').call();
       expect(res.error, equals(RpcErrorCode.noError));
       print(res.result);
     });
@@ -35,7 +35,7 @@ void main() {
     });
 
     test('Should make call weatherForecast.get', () async {
-      var res = await rpc.function('weatherForecast.get').call([]);
+      var res = await rpc.function('weatherForecast.get').call();
       expect(res.error, equals(RpcErrorCode.noError));
       print(res.result);
     });
@@ -45,7 +45,7 @@ void main() {
           await rpc.function('auth').call(['email@example.com', 'password']);
       expect(res.error, equals(RpcErrorCode.noError));
 
-      res = await rpc.function('user.get').call([]);
+      res = await rpc.function('user.get').call();
       expect(res.error, equals(RpcErrorCode.noError));
 
       print(res.result);
