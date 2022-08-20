@@ -1,6 +1,6 @@
 name: cadmean_rpc
 description: A Cadmean RPC library for Dart. Its goal is to simplify the communication with your web API, hiding all the HTTP and JSON stuff.
-version: 0.1.2
+version: 0.2.0
 repository: https://github.com/cadmean-ru/cadmean_rpc_dart
 
 environment:

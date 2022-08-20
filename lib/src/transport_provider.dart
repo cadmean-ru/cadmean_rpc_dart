@@ -16,7 +16,7 @@ class HttpTransportProvider implements TransportProvider {
     var req = http.Request('POST', Uri.parse(url));
     req.bodyBytes = data;
     req.headers['Content-Type'] = contentType;
-    req.headers['Cadmean-RPC-Version'] = '2.1';
+    req.headers['Cadmean-RPC-Version'] = '3.0';
 
     http.StreamedResponse res;
     try {

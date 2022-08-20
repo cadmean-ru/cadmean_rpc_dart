@@ -1,25 +1,25 @@
 /// Contains the predefined error codes.
 class RpcErrorCode {
-  static const int noError = 0;
+  static const String? noError = null;
 
-  static const int functionNotCallable = -100;
-  static const int functionNotFound = -101;
-  static const int incompatibleRpcVersion = -102;
-  static const int invalidArguments = -200;
+  static const String functionNotCallable = "function_not_callable";
+  static const String functionNotFound = "function_not_found";
+  static const String incompatibleRpcVersion = "incompatible_rpc_version";
+  static const String invalidArguments = "invalid_arguments";
 
-  static const int encodeError = -300;
-  static const int decodeError = -301;
+  static const String encodeError = "encode_error";
+  static const String decodeError = "decode_error";
 
-  static const int transportError = -400;
-  static const int notSuccessfulStatusCode = -401;
+  static const String transportError = "transport_error";
+  static const String notSuccessfulStatusCode = "not_successful_status_code";
 
-  static const int internalServerError = -500;
+  static const String internalServerError = "internal_server_error";
 
-  static const int authorizationError = -600;
+  static const String authorizationError = "authorization_error";
 
-  static const int preCallChecksFailed = -700;
+  static const String preCallChecksFailed = "pre_call_checks_failed";
 
-  static const int niceError = -69;
+  static const String niceError = "nice_error";
 }
 
 /// Thrown if the function returned an error.
@@ -29,7 +29,7 @@ class RpcErrorCode {
 /// that are negative numbers or a user-defined code that should be
 /// positive by convention. Zero indicates no error.
 class FunctionError {
-  final int code;
+  final String code;
 
   FunctionError(this.code);
 

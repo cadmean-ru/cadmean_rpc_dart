@@ -3,28 +3,28 @@ import 'package:test/test.dart';
 
 void main() {
   group('RPC', () {
-    var rpc = RpcClient('http://testrpc.cadmean.ru');
+    var rpc = RpcClient('http://localhost:5000');
 
     test('Should make call concat', () async {
-      var res = await rpc.function('concat').call(['am', 'og', 'us']);
+      var res = await rpc.function('test.concatString').call(['am', 'og', 'us']);
       expect(res.error, equals(RpcErrorCode.noError));
       expect(res.result, equals('amogus'));
     });
 
     test('Should make call getDate', () async {
-      var res = await rpc.function('getDate').call();
+      var res = await rpc.function('test.getDate').call();
       expect(res.error, equals(RpcErrorCode.noError));
       print(res.result);
     });
 
     test('Should make call sum', () async {
-      var res = await rpc.function('sum').call([42, 27]);
+      var res = await rpc.function('test.addInt').call([42, 27]);
       expect(res.error, equals(RpcErrorCode.noError));
       expect(res.result, equals(69));
     });
 
     test('Should make call square', () async {
-      var res = await rpc.function('square').call([3]);
+      var res = await rpc.function('test.squareDouble').call([3]);
       expect(res.error, equals(RpcErrorCode.noError));
       expect(res.result, equals(9));
     });

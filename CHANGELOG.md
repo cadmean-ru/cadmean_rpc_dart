@@ -9,3 +9,7 @@
 ## 0.1.2
 
 - Fixed object arguments encoding.
+
+## 0.2.0
+
+- String error codes.

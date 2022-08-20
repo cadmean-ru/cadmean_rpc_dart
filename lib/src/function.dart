@@ -29,8 +29,8 @@ class RpcFunction {
   /// Throws [FunctionError] if the call failed with an error.
   Future<dynamic> callThrowing([List arguments = const []]) async {
     var output = await call(arguments);
-    if (output.error != RpcErrorCode.noError) {
-      throw FunctionError(output.error);
+    if (output.error != null && output.error != RpcErrorCode.noError) {
+      throw FunctionError(output.error!);
     }
     return output.result;
   }
