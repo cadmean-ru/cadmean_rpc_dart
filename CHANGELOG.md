@@ -13,3 +13,7 @@
 ## 0.2.0
 
 - String error codes.
+
+## 0.2.1
+
+- Fixed encoding issue.

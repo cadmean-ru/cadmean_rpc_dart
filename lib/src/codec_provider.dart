@@ -15,7 +15,7 @@ class JsonCodecProvider implements CodecProvider {
 
   @override
   Uint8List encode(dynamic src) {
-    return Uint8List.fromList(jsonEncode(src).codeUnits);
+    return Uint8List.fromList(utf8.encode(jsonEncode(src)));
   }
 
   @override

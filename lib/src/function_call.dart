@@ -10,7 +10,7 @@ class FunctionCall {
   FunctionCall.fromJson(Map<String, dynamic> json)
       : arguments = json['args'],
         authorization = json['auth'],
-        metaData = json['meta'];
+        metaData = json['metaData'];
 
   Map toJson() {
     return <String, dynamic>{
